@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="MoRF avatars are created from short monocular videos and can be rendered in real-time (30+ FPS, 640x640px) on mobile devices">
+  <meta property="og:title" content="FineControlNet: Fine-level Text Control for Image Generation with Spatially Aligned Text Control Injection"/>
+  <meta property="og:description" content="FineControlNet: Fine-level Text Control for Image Generation with Spatially Aligned Text Control Injection"/>
+  <meta property="og:url" content="https://samsunglabs.github.io/FineControlNet-project-page"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="FineControlNet: Fine-level Text Control for Image Generation with Spatially Aligned Text Control Injection">
+  <meta name="twitter:description" content="MoRF avatars are created from short monocular videos and can be rendered in real-time (30+ FPS, 640x640px) on mobile devices">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>FineControlNet: Fine-level Text Control for Image Generation with Spatially Aligned Text Control Injection</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title"><a style="color:black;">FineControlNet</a>: <a style="color:black;">Fine-level Text Control for Image Generation with Spatially Aligned Text Control Injection</a> </h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <div class="author-portrait">
+                  <img class="img-fluid mb-3" src="static/images/avatar/hongsuk.png" alt="">
+                </div>
+                <a href="https://hongsukchoi.github.io/" target="_blank">Hongsuk*<br>Choi</a></span>
+              <span class="author-block">
+                <div class="author-portrait">
+                  <img class="img-fluid mb-3" src="static/images/avatar/isaac.png" alt="">
+                </div>
+                <a href="https://kasai2020.github.io/" target="_blank">Isaac*<br>Kasahara</a></span>
+              <span class="author-block">
+                <div class="author-portrait">
+                  <img class="img-fluid mb-3" src="static/images/avatar/selim.jpeg" alt="">
+                </div>
+                <a href="https://ksengin.github.io/" target="_blank">Selim<br>Engin</a></span>
+              <span class="author-block">
+                <div class="author-portrait">
+                  <img class="img-fluid mb-3" src="static/images/avatar/moritz.jpg" alt="">
+                </div>
+                <a href="https://scholar.google.com/citations?user=1rNy1zAAAAAJ&hl=en&oi=ao" target="_blank">Moritz A.<br>Graule</a></span>
+              <span class="author-block">
+                <div class="author-portrait">
+                  <img class="img-fluid mb-3" src="static/images/avatar/nikhil.jpeg" alt="">
+                </div>
+                <a href="https://www.linkedin.com/in/nikhilcd" target="_blank">Nikhil<br>Chavan-Dafle</a></span>
+              <span class="author-block">
+                <div class="author-portrait">
+                  <img class="img-fluid mb-3" src="static/images/avatar/volkan.jpg" alt="">
+                </div>
+                <a href="https://scholar.google.com/citations?user=Q5KT-hEAAAAJ&hl=en&oi=ao" target="_blank">Volkan<br>Isler</a></span>
+            </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">* Denotes equal contribution</span>
+                  </div>
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">Samsung AI Center - New York</span>
+                  </div>
+
+                  <!-- ArXiv Link -->
+                  <span class="link-block">
+                    <a href="https://arxiv.org/" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv page (Coming Soon)</span>
+                  </a>
+                  <span class="link-block">
+                    <a href="https://arxiv.org/" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv pdf (Coming Soon)</span>
+                  </a>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/SamsungLabs/FineControlNet" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <!-- <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span> -->
+                    <span>Code (Coming Soon)</span>
+                  </a>
+
+                  <br>
+
+                
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+    <center>
+      <!-- <img src="static/images/method_final.png" alt="Method"/> -->
+      <video id="teaser" autoplay muted loop playsinline width="80%" height="auto">
+        <source src="./static/videos/teaser_finecontrolnet.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">FineControlNet</span> produces coherent images from text and spatial conditioning.
+      </h2>
+    </center>
+    </div>
+  </div>
+</section>
+
+<!-- <video poster="" id="steve" autoplay controls muted loop playsinline height="100%"> -->
+
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-chair-t">
+        <center>
+          <video poster="" id="chair-t" controls muted loop playsinline width="80%" height="80%">
+            <source src="./static/videos/output_1.mp4"
+                    type="video/mp4">
+          </video>
+        </center>
+        </div>
+        <div class="item item-chair-tp">
+        <center>
+          <video poster="" id="chair-tp" controls muted loop playsinline width="80%" height="80%">
+            <source src="./static/videos/output_0.mp4"
+                    type="video/mp4">
+          </video>
+        </center>
+        </div>
+        <div class="item item-shiba">
+        <center>
+          <video poster="" id="shiba" controls muted loop playsinline width="80%" height="80%">
+            <source src="./static/videos/output_2.mp4"
+                    type="video/mp4">
+          </video>
+        </center>
+        </div>
+        <div class="item item-fullbody">
+        <center>
+          <video poster="" id="fullbody" controls muted loop playsinline width="80%" height="80%">
+            <source src="./static/videos/output_9.mp4"
+                    type="video/mp4">
+          </video>
+        </center>
+        </div>
+        <div class="item item-blueshirt">
+        <center>
+          <video poster="" id="blueshirt" controls muted loop playsinline width="80%" height="80%">
+            <source src="./static/videos/output_16.mp4"
+                    type="video/mp4">
+          </video>
+        </center>
+        </div>
+        <div class="item item-mask">
+        <center>
+          <video poster="" id="mask" controls muted loop playsinline width="80%" height="80%">
+            <source src="./static/videos/output_11.mp4"
+                    type="video/mp4">
+          </video>
+        </center>
+        </div>
+        <div class="item item-coffee">
+        <center>
+          <video poster="" id="coffee" controls muted loop playsinline width="80%" height="80%">
+            <source src="./static/videos/output_3.mp4"
+                    type="video/mp4">
+          </video>
+        </center>
+        </div>
+        <div class="item item-coffee">
+          <center>
+            <video poster="" id="coffee" controls muted loop playsinline width="80%" height="80%">
+              <source src="./static/videos/output_13.mp4"
+                      type="video/mp4">
+            </video>
+          </center>
+        </div>
+        <div class="item item-coffee">
+          <center>
+            <video poster="" id="coffee" controls muted loop playsinline width="80%" height="80%">
+              <source src="./static/videos/output_4.mp4"
+                      type="video/mp4">
+            </video>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section class="hero teaser">
+  <div class="hero-body has-text-justified">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div class="container">
+          Recently introduced ControlNet has the ability to steer the text-driven image generation process with geometric input such as human 2D pose, or edge features. While ControlNet provides control over the geometric form of the instances in the generated image, it lacks the capability to dictate the visual appearance of each instance.
+          <br>
+          <br>
+        </div>
+        <div class="container">
+          We present FineControlNet to provide fine control over each instance’s appearance while maintaining the precise pose control capability. Specifically, we develop and demonstrate FineControlNet with geometric control via human pose images and appearance control via instance-level text prompts. The spatial alignment of instance-specific text prompts and 2D poses in latent space enables the fine control capabilities of FineControlNet.
+          <br>
+          <br>
+        </div>
+        <div class="container">
+          We evaluate the performance of FineControlNet with rigorous comparison against state-of-the-art pose-conditioned text-to-image diffusion models. FineControlNet achieves superior performance in generating images that follow the user-provided instance-specific text prompts and poses.
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="hero-body has-text-justified">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+
+        <h2 class="title has-text-centered">Video</h2>
+
+        <video poster="" id="video1" controls height="100%">
+          <source src="static/videos/FineControlNet.mp4" type="video/mp4">
+        </video>
+        
+        <!-- <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths"> -->
+            
+            
+          <!-- </div>
+        </div> -->
+        
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2 class="title has-text-centered">FineControlNet Method Overview</h2>
+
+        <div class="container">
+          FineControlNet takes as input a text prompt and a spatial conditioning image. The text prompt is then parsed to assign each conditioning instance it's own individual prompt. Each grouping of prompt, skeleton, mask, and noise map is then passed to our model. By spatially injecting the individual prompt information into different areas of the image, we can produce high quality images that adhere to the input prompt.
+          <br>
+          <br>
+        </div>
+        <img src="static/images/method_overview.png" alt="Method"/>
+
+
+        <br>
+        <br>
+        <br>
+        <!-- <h2 class="title has-text-centered">Additional Videos</h2> -->
+
+        <!-- <div class="container">
+          <div class="subtitle has-text-centered">
+            <p id="centerText">Our Surface-Aware Masking algorithm or SAM</p>
+          </div>
+          <center>
+            <video poster="" id="video1" width="900" height="600" controls muted loop>
+              <source src="static/videos/SAM_muted.mp4" type="video/mp4">
+            </video>
+          </center>
+          Our Surface-Aware Masking (SAM) algorithm allows us to map unknown 3D areas into 2D accurately. This allows us to then inpaint more accurately which in turn lets us estimate the geometry and texture of the unknown objects in the scene. 
+        </div>
+        <br> -->
+        <!-- <br> -->
+        <!-- <div class="container">
+          <div class="subtitle has-text-centered">
+            <p id="centerText">Viewpoint Selection Method</p>
+          </div>
+          <center>
+            <video poster="" id="video2" width="900" height="600" controls muted loop>
+              <source src="static/videos/viewpoints_muted.mp4" type="video/mp4">
+            </video>
+          </center>
+          We search for viewpoints by traversing directions along a sphere around the scene away from the original viewpoint.  We look for viewpoints using our context ratio (context pixels / all pixels) and use the viewpoint that provides inpainting with enough context to work accurately but still provide new information.  We do this for many different directions, and then apply our constistency filtering to obtain our final output.
+        </div> -->
+        <!-- </div>
+        </div>
+        </section> -->
+        <!-- End image carousel -->
+        <br>
+        <br>
+        <h2 class="title has-text-centered">Qualitative Results</h2>
+
+        <div class="container">
+          We compare our method against 6 state of the art baselines qualitatively and quantitatively. Below are some examples of images generated from our method vs. the baselines. For our full analysis please refer to our paper.
+          <br>
+          <br>
+        </div>
+        <img src="static/images/qual_results_updated.png" alt="Method"/>
+
+        <br>
+        <br>
+        <br>
+        <h2 class="title has-text-centered">Other Modalities</h2>
+
+        <div class="container">
+          Our method also has the capability to condition on modalities other than human pose. We include qualitative results on other modalities such as Canny Edge, M-LSD, Soft Edges, and Sketch inputs as examples of other spatial conditions our method can handle.
+          <br>
+          <br>
+        </div>
+        <img src="static/images/other_modalities.png" alt="Method"/>
+
+        <br>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <
+    </div>
+  </div>
+</section> -->
+
+
+<!-- <section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<!-- Youtube video -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Video Presentation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End youtube video -->
+
+
+<!-- Video carousel -->
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Another Carousel</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <source src="static/videos/carousel1.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <source src="static/videos/carousel2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <source src="static/videos/carousel3.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End video carousel -->
+
+
+
+
+
+
+<!-- Paper poster -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section> -->
+<!--End paper poster -->
+
+
+<!-- <br>
+<br>
+<br>
+<br>
+<h2 class="title has-text-centered">Qualitative Novel View Results</h2>
+
+<div class="container">
+  Our method also has the capability to produce realistic novel views of multiple objects. Using the Rotation + SAM + Inpaint parts of our method, we show qualitative results of our methods ability to generate novel views given an RGB-D image.
+  <br>
+  <br>
+</div>
+<img src="static/images/Inpainted_Qualitative.png" alt="Method"/>
+
+
+<br>
+<br>
+<br>
+<br> -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@misc{choi2023finecontrolnet,
+        title={Fine-level Text Control for Image Generation with Spatially Aligned Text Control Injection}, 
+        author={Hongsuk Choi and Isaac Kasahara and Selim Engin and Moritz Graule and Nikhil Chavan-Dafle and Volkan Isler},
+        year={2023},
+        eprint={},
+        archivePrefix={arXiv},
+        primaryClass={cs.CV}
+  }
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+
+
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by-nc/3.0/88x31.png"/>
+            </a><br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0">Creative Commons Attribution-NonCommercial 4.0 International License</a> (CC-BY-NC).
+          </p>
+          <p>
+            This webpage is built with the template from <a
+                  href="https://github.com/nerfies/nerfies.github.io" target="_blank">NeRFies</a>. We sincerely thank <a href="https://keunhong.com/" target="_blank">Keunhong Park</a> for developing and open-sourcing this template.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
