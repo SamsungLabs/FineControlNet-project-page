@@ -1,4 +1,4 @@
-## RIC project page
+## Project page
 Goto https://samsunglabs.github.io/FineControlNet-project-page
 
 ## Acknowledgments
